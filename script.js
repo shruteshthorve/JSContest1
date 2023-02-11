@@ -8,20 +8,49 @@ let arr = [
 
 function PrintStudentswithMap() {
   //Write your code here , just console.log
+  arr.map(arr => {
+    if (arr.marks > 50) {
+      console.log(arr);
+    }
+  });
 }
 
 function PrintStudentsbyForEach() {
   //Write your code here , just console.log
+  arr.forEach(arr => {
+    if (arr.marks > 50) {
+      console.log(arr);
+//       .name + ' ' + arr.marks
+    }
+  });
 }
 
 function addData() {
   //Write your code here, just console.log
+  let newStudent = {
+    id: 4,
+    name: "shrutesh",
+    age: 22,
+    marks: 51
+  };
+  arr.push(newStudent);
+  console.log(newStudent);
+  console.log(arr);
 }
 
 function removeFailedStudent() {
   //Write your code here, just console.log
+  arr = arr.filter(student => student.marks >= 50);
+  console.log(arr);
 }
 
 function concatenateArray() {
   //Write your code here, just console.log
+  let newArr = [
+    {id: 4, name: "saurabh", age: 22, marks: 60},
+    {id: 5, name: "sagar", age: 23, marks: 40},
+    {id: 6, name: "shivam", age: 24, marks: 70}
+  ];
+  let concatenatedArr = arr.concat(newArr);
+  console.log(concatenatedArr);
 }
